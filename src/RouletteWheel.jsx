@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const RouletteWheel = ({ items }) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -55,6 +56,14 @@ const RouletteWheel = ({ items }) => {
       </button>
     </div>
   );
+};
+
+RouletteWheel.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.number).isRequired,
+};
+
+RouletteWheel.defaultProps = {
+  items: [], // Default to an empty array if no items are provided
 };
 
 export default RouletteWheel;
