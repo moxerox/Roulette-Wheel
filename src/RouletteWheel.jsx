@@ -12,7 +12,7 @@ const RouletteWheel = ({ items }) => {
     const intervalId = setInterval(() => {
       currentIndex = (currentIndex + 1) % items.length;
       setActiveIndex(currentIndex);
-    }, 100); // Change the number to adjust the speed of highlighting
+    },  50); // Change the number to adjust the speed of highlighting
 
     // Stop spinning after 4 seconds and highlight the final item
     setTimeout(() => {
